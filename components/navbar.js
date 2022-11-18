@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { initializeTron } from "../lib/tronAdaptor";
+import { initializeWeb3 } from "../lib/web3Adaptor";
 import styles from "../styles/Navbar.module.css";
 const Navbar = () => {
   const [address, setAddress] = useState(null);
@@ -9,15 +9,15 @@ const Navbar = () => {
     if (address) {
       setAddress(null);
     } else {
-      initializeTron().then((res) => {
-        setAddress(res.defaultAddress.base58);
+      initializeWeb3().then((res) => {
+        setAddress(res.accounts[0]);
       });
     }
   };
 
   useEffect(() => {
-    initializeTron().then((res) => {
-      setAddress(res.defaultAddress.base58);
+    initializeWeb3().then((res) => {
+      setAddress(res.accounts[0]);
     });
   }, []);
 

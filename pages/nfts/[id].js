@@ -4,13 +4,11 @@ import { toast } from "react-toastify";
 import getIPFS from "../../lib/getIPFS";
 import {
   getFromTokenId,
-  initializeTron,
+  initializeWeb3,
   makeOffer,
   approveOffer,
   cancelOffer,
-  parseAddress,
-  parseUint,
-} from "../../lib/tronAdaptor";
+} from "../../lib/web3Adaptor";
 import styles from "../../styles/NFTPage.module.css";
 
 const NFTPage = () => {
@@ -28,14 +26,14 @@ const NFTPage = () => {
   }, [router.isReady]);
 
   const getMetadata = async () => {
-    const tron = await initializeTron();
-    setAddress(tron.defaultAddress.base58);
+    const web3 = await initializeWeb3();
+    setAddress(web3.accounts[0]);
     console.log(id);
     const _nft = await getFromTokenId(id);
     setNft(_nft);
     const data = await fetch(getIPFS(_nft.tokenURI));
     const json = await data.json();
-    setOffer(parseUint(_nft.price));
+    setOffer(_nft.price);
     setMetadata(json);
   };
 
@@ -86,22 +84,14 @@ const NFTPage = () => {
       />
       <div>
         <div className={styles.title}>{metadata.name}</div>
-        <div className={styles.creator}>
-          Created by {parseAddress(nft.owner)}
-        </div>
+        <div className={styles.creator}>Created by {nft.owner}</div>
         <p className={styles.description}>{metadata.description}</p>
-        <div className={styles.offer}>
-          Minimum Offer: {parseUint(nft.price)} TRX{" "}
-        </div>
-        {parseAddress(nft.currentBider) !=
-          "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" && (
-          <div className={styles.offer}>
-            Highest Bidder: {parseAddress(nft.currentBider)}
-          </div>
+        <div className={styles.offer}>Minimum Offer: {nft.price} TRX </div>
+        {nft.currentBider != "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" && (
+          <div className={styles.offer}>Highest Bidder: {nft.currentBider}</div>
         )}
-        {address == parseAddress(nft.owner) ? (
-          parseAddress(nft.currentBider) !=
-          "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" ? (
+        {address == nft.owner ? (
+          nft.currentBider != "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" ? (
             <>
               <div className={styles.bidplace}>
                 <div className={styles.button} onClick={handleAcceptOffer}>
@@ -115,7 +105,7 @@ const NFTPage = () => {
           ) : (
             <></>
           )
-        ) : address == parseAddress(nft.currentBider) ? (
+        ) : address == nft.currentBider ? (
           <div className={styles.bidplace}>
             <div className={styles.button} onClick={handleCancelOffer}>
               Cancel Offer

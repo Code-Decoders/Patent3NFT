@@ -5,7 +5,7 @@ import { Unity, useUnityContext } from "react-unity-webgl";
 import recorder from "react-canvas-recorder";
 import { uploadMetadata } from "../../lib/uploadMetadata";
 import { toast } from "react-toastify";
-import { mint } from "../../lib/tronAdaptor";
+import { mint } from "../../lib/web3Adaptor";
 
 const Create = () => {
     const [state, setState] = useState({

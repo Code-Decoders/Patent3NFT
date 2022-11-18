@@ -6,7 +6,7 @@ import Card from "../components/card";
 import TabButton from "../components/tab_button";
 import styles from "../styles/Home.module.css";
 
-import { getFromCategory, initializeTron } from "../lib/tronAdaptor";
+import { getFromCategory, initializeWeb3 } from "../lib/web3Adaptor";
 
 export const category = [
   "NFT",
@@ -25,7 +25,7 @@ export default function Home() {
   const [loading, setLoading] = React.useState(true);
 
   const handleFetch = async () => {
-    initializeTron().then(async (res) => {
+    initializeWeb3().then(async () => {
       setLoading(true);
       await getFromCategory(category[activeTab]).then((res) => {
         setNfts(res);
