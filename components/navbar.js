@@ -17,7 +17,7 @@ const Navbar = () => {
 
   useEffect(() => {
     initializeWeb3().then((res) => {
-      setAddress(res.accounts[0]);
+      setAddress(res?.accounts[0]);
     });
   }, []);
 
