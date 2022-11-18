@@ -1,0 +1,52 @@
+.button {
+  background: var(--glass);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 0;
+  min-width: 132px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button::after {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background: var(--linear-gradient);
+  right: 0;
+  top: 0;
+  border-radius: 10px;
+  z-index: -1;
+  transition: all 0.3s ease-out;
+}
+
+.button:hover::after {
+  min-width: 132px;
+}
+
+/* .button:hover {
+  background: var(--linear-gradient);
+} */
+
+/* Animation of button background  */
+
+@keyframes Animations {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

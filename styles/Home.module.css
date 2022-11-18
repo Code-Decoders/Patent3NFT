@@ -1,0 +1,161 @@
+.container {
+  padding: 0px 100px;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 0.5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.title {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 76px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+  gap: 45px;
+  margin-bottom: 70px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+
+.Explore {
+  margin-bottom: 300px;
+}
+
+.workflow {
+  display: flex;
+  gap: 0 52px;
+}
+
+.card {
+  background: var(--glass);
+  border-radius: 10px;
+  padding: 79px 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px 0;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  text-align: center;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 32px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.button {
+  background: var(--linear-gradient);
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.button.outlined {
+  background: var(--black);
+  border: 1px solid var(--pink);
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 25px;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.pic {
+  flex: 1;
+  width: 30%;
+}
+
+.about_title {
+  font-weight: 500;
+  font-size: 66px;
+  line-height: 90px;
+  font-family: 'DM Mono', monospace;
+  margin-bottom: 24px;
+}
+
+.about_text {
+  flex: 1;
+}
+
+.about_description {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  max-width: 350px;
+}
+
+.stats {
+  display: flex;
+  gap: 0 32px;
+  margin-top: 60px;
+}
+
+.stat_title {
+  font-size: 27px;
+  font-weight: 500;
+  font-family: 'DM Mono', monospace;
+}
+
+
+.stat_description {
+  font-size: 23px;
+  font-weight: 500;
+  color: #9f9f9f;
+  font-family: 'DM Mono', monospace;
+}

@@ -1,0 +1,65 @@
+.container {
+  padding: 20px;
+  text-align: left;
+  background: var(--glass);
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.details {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: "DM Mono", monospace;
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.creator {
+  font-family: "DM Mono", monospace;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.offer {
+  font-family: "DM Mono", monospace;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.owner {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.button {
+  background: var(--linear-gradient);
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+  align-items: flex-end;
+}

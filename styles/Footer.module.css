@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    gap: 0 24px;
+}
+
+.text {
+    font-size: 19px;
+    margin: 24px 0;
+
+}
+
+
+.logo {
+    object-fit: contain;
+    height: 60px;
+}
+
+.action {
+    font-size: 19px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+}
+
+.actionColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+}
+
+.social {
+    display: flex;
+    gap: 0 10px;
+    cursor: pointer;
+    user-select: none;
+}
