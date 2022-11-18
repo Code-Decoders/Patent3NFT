@@ -11,7 +11,7 @@ const Create = () => {
     const [state, setState] = useState({
         title: "",
         description: "",
-        category: "",
+        category: "NFT",
     });
 
     const ref = useRef();

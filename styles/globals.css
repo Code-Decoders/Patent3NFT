@@ -15,13 +15,13 @@ body {
   --black: #100f15;
   --white: #ffffff;
   --gray: #f5f5f5;
-  --yellow: #e3d701;
-  --pink: #fd01a7;
-  --purple: #b72ab1;
+  --yellow: #fd01a7;
+  --pink: #8247e5;
+  --purple: #8247e5;
   --linear-gradient: linear-gradient(
     98.62deg,
-    #e3d701 -27.91%,
-    #fd01a7 102.96%
+    #fd01a7 -27.91%,
+    #8247e5 102.96%
   );
   --glass: rgba(55, 55, 55, 0.3);
 }

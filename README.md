@@ -23,7 +23,7 @@
 
 ## Demo
 
-Live Website (https://pat3nt.netlify.app/)
+Live Website (http://patent3.netlify.app/)
 
 Youtube Video Demo
 

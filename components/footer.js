@@ -6,13 +6,13 @@ const Footer = () => {
     return (
         <div className={styles.container}>
             <div style={{ flex: 1 }}>
-                <img src="https://pat3nt.netlify.app/images/Logo.png" className={styles.logo}/>
+                <img src="http://patent3.netlify.app/images/Logo.png" className={styles.logo}/>
                 <div className={styles.text}>Unique Patent NFTs Marketplace. rare and authentic <br />digital ideas</div>
                 <div className={styles.social}>
-                    <img src="https://pat3nt.netlify.app/images/fb.svg" />
-                    <img src="https://pat3nt.netlify.app/images/discord.svg" />
-                    <img src="https://pat3nt.netlify.app/images/instagram.svg" />
-                    <img src="https://pat3nt.netlify.app/images/yt.svg" />
+                    <img src="http://patent3.netlify.app/images/fb.svg" />
+                    <img src="http://patent3.netlify.app/images/discord.svg" />
+                    <img src="http://patent3.netlify.app/images/instagram.svg" />
+                    <img src="http://patent3.netlify.app/images/yt.svg" />
                 </div>
             </div>
             <div className={styles.actionColumn}>
