@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import getIPFS from "../lib/getIPFS";
-import { parseAddress, parseUint } from "../lib/tronAdaptor";
 import styles from "../styles/Card.module.css";
 
 const Card = ({ nft }) => {
@@ -32,9 +31,9 @@ const Card = ({ nft }) => {
         <div className={styles.details}>
           <div>
             <div className={styles.title}>{metadata.name}</div>
-            <div className={styles.creator}>Created by {parseAddress(nft.owner).slice(0,10)}...</div>
+            <div className={styles.creator}>Created by {nft.owner.slice(0,10)}...</div>
             <div className={styles.offer}>Latest Offer</div>
-            <div className={styles.offer}>{parseUint(nft.price)} TRX</div>
+            <div className={styles.offer}>{nft.price} TRX</div>
           </div>
           <div className={styles.right}>
             <img className={styles.owner} src="images/image.png" />
