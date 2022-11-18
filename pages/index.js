@@ -6,7 +6,7 @@ import Card from "../components/card";
 import TabButton from "../components/tab_button";
 import styles from "../styles/Home.module.css";
 
-import { getFromCategory, initializeWeb3 } from "../lib/web3Adaptor";
+import { getFromCategory, GetValueInDollar, initializeWeb3 } from "../lib/web3Adaptor";
 
 export const category = [
   "NFT",
