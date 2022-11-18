@@ -93,7 +93,7 @@ export default function Home() {
           })}
         </div>
         <div className={styles.grid}>
-          {(loading ? [] : nfts).map((nft, index) => {
+          {(loading ? [] : nfts)?.map((nft, index) => {
             console.log(nft);
             return <Card key={index} nft={nft} />;
           })}

@@ -33,7 +33,7 @@ const Card = ({ nft }) => {
             <div className={styles.title}>{metadata.name}</div>
             <div className={styles.creator}>Created by {nft.owner.slice(0,10)}...</div>
             <div className={styles.offer}>Latest Offer</div>
-            <div className={styles.offer}>{nft.price} TRX</div>
+            <div className={styles.offer}>{(nft.price/ 10 ** 18).toFixed(2)} MATIC</div>
           </div>
           <div className={styles.right}>
             <img className={styles.owner} src="images/image.png" />

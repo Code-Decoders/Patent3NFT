@@ -33,7 +33,7 @@ const NFTPage = () => {
     setNft(_nft);
     const data = await fetch(getIPFS(_nft.tokenURI));
     const json = await data.json();
-    setOffer(_nft.price);
+    setOffer((_nft.price / 10 ** 18).toFixed(2));
     setMetadata(json);
   };
 
@@ -86,12 +86,12 @@ const NFTPage = () => {
         <div className={styles.title}>{metadata.name}</div>
         <div className={styles.creator}>Created by {nft.owner}</div>
         <p className={styles.description}>{metadata.description}</p>
-        <div className={styles.offer}>Minimum Offer: {nft.price} TRX </div>
-        {nft.currentBider != "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" && (
+        <div className={styles.offer}>Minimum Offer: {(nft.price/ 10 ** 18).toFixed(3)} MATIC </div>
+        {nft.currentBider != "0x0000000000000000000000000000000000000000" && (
           <div className={styles.offer}>Highest Bidder: {nft.currentBider}</div>
         )}
         {address == nft.owner ? (
-          nft.currentBider != "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb" ? (
+          nft.currentBider != "0x0000000000000000000000000000000000000000" ? (
             <>
               <div className={styles.bidplace}>
                 <div className={styles.button} onClick={handleAcceptOffer}>
