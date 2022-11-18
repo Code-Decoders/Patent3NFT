@@ -16,7 +16,7 @@ contract NFTPatent is ERC721URIStorage
     AggregatorV3Interface internal priceFeed;
         using Counters for Counters.Counter;
     Counters.Counter totalItems; // Total number of NFTS Items
-    uint256 public minimumListingPrice = 1 ether;
+    uint256 public minimumListingPrice = 0.1 ether;
     address owner;
 
     mapping(uint256 => Patent) private tokenIdToPatent; // mapping of int to struct
