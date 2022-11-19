@@ -19,15 +19,15 @@
 
 ## Deployed Smart Contracts
 
-- [The Patent NFT Contract](https://shasta.tronscan.org/#/contract/TJU6x2uk4ubGPNdU2boUndCi1VehQYiLdU/code)
+- [The Patent NFT Contract](https://mumbai.polygonscan.com/address/0x115DB81AEb7FB8d675B8bEc85342f0C1496F39b6)
 
 ## Demo
 
-Live Website (http://patent3.netlify.app/)
+Live Website (https://patent3.netlify.app/)
 
 Youtube Video Demo
 
-[![Youtube Video](https://img.youtube.com/vi/KYnxJ5afecY/sddefault.jpg)](https://youtu.be/KYnxJ5afecY)
+[![Youtube Video](https://img.youtube.com/vi/KYnxJ5afecY/sddefault.jpg)](https://www.youtube.com/watch?v=tznL17-xYC4)
 
 
 
@@ -35,7 +35,7 @@ Youtube Video Demo
 
 **Frontend:** NEXT.JS, Unity, WebGL, web3.js
 
-**Backend:** Solidity, IPFS, TRON Blockchain
+**Backend:** Solidity, IPFS, Polygon Blockchain, Chainlink, QuickNode
 ## Roadmap
 
 - [ ]  Use AI for removing the spam ideas or dirty content.   
