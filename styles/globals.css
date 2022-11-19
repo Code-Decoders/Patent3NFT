@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--black);
+  color: white;
   scroll-behavior: smooth;
   font-family: "Quicksand", sans-serif;
 }
