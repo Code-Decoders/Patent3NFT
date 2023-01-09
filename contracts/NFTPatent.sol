@@ -496,11 +496,11 @@ contract NFTPatent is ERC721URIStorage
 
      function GetLatestPrice()  public view  returns (uint) {
         (
-            /*uint80 roundID*/,
+            uint80 roundID,
             int256 price,
-            /*uint startedAt*/,
-            /*uint timeStamp*/,
-            /*uint80 answeredInRound*/
+            uint startedAt,
+            uint timeStamp,
+            uint80 answeredInRound
         ) = priceFeed.latestRoundData();
 
 
